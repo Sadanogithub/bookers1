@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Bookers</title>
+    <link rel="stylesheet" href="/bookers/app/assets/stylesheets/application.css">
+</head>
+
+<body>
+<div class="notice">
+  <p><%= flash[:notice] %></p>
+</div>
+
+<div class="show-box">
+  <div class="show-box-title">
+    <p><strong>Title:</strong>
+    <%= @book.title %></p>
+  </div>
+  <div class="show-box-body">
+    <p><strong>Body:</strong>
+    <%= @book.body %></p>
+  </div>
+</div>
+
+<%= link_to "Edit", edit_book_path(@book.id) %> | <%= link_to "Back",  books_path %> 
+
+</body>
+</html>
